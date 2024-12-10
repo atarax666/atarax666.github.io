@@ -1,0 +1,66 @@
+/* Общие стили для кнопки уведомлений */
+.notification-icon {
+    position: relative;
+    display: inline-block;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Счетчик уведомлений, который будет отображаться на иконке */
+.counter {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 50%;
+    display: none; /* Изначально скрыт */
+}
+
+/* Сообщение о новом уведомлении */
+.new-notification {
+    position: absolute;
+    top: 0;
+    left: 40px;  /* Размещаем справа от иконки */
+    font-size: 12px;  /* Сделаем текст меньше */
+    color: #ff9800;
+    padding: 5px;
+    display: none; /* Изначально скрыто */
+}
+
+/* Иконка колокольчика */
+.bell-icon {
+    font-size: 35px;
+}
+
+/* Выпадающий список уведомлений */
+.notification-dropdown {
+    display: none; /* Изначально скрыт */
+    position: absolute;
+    top: 40px;
+    left: 720px;
+    background-color: rgb(59, 59, 59);
+    border: 1px solid #ccc;
+    width: 250px;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+/* Стили для каждого уведомления */
+.notification-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.notification-item:hover {
+    background-color: #f1f1f1;
+}

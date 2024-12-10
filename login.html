@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="logo">
+                <img src="images/forest.jpg" alt="Logo">
+            </div>
+            <h2 class="title">С возвращением!</h2>
+            <p class="subtitle">Войдите чтобы получить безграничный доступ к информации о погоде.</p>
+        </div>
+        <div class="right">
+            <form id="login-form">
+                <label>Почта *</label>
+                <input type="email" id="email" placeholder="Enter your mail address" required>
+                <label>Пароль *</label>
+                <input type="password" id="password" placeholder="Enter password" required>
+                <div class="actions">
+                    <label><input type="checkbox"> Запомнить меня</label>
+                    <a href="#">Забыли пароль?</a>
+                </div>
+                <button type="submit" class="btn" onclick="window.location.href='index.html'">Войти</button>
+                <div class="separator">Или зарегистрироваться с помощью</div>
+                <button type="button" class="btn google">Войти с помощью Google</button>
+                <p>Ещё нет аккаунта? <a href="register.html">Зарегистрируйтесь здесь</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

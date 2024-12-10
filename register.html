@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="styles/register.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <img src="images/river.jpg" alt="Фон регистрации">
+        </div>
+        <div class="right-side">
+            <div class="logo">✦</div>
+            <h1>Добро пожаловать!</h1>
+            <p>Введите свои данные для регистрации</p>
+            <form id="registrationForm" class="form-container">
+                <label for="email"><b>Электронная почта</b></label>
+                <input type="email" id="email" name="email" placeholder="Введите вашу почту" required>
+
+                <label for="password"><b>Пароль</b></label>
+                <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+
+                <label for="passwordConfirm"><b>Повторите пароль</b></label>
+                <input type="password" id="passwordConfirm" name="passwordConfirm" placeholder="Повторите пароль" required>
+
+                <button type="submit" id="registerButton" onclick="window.location.href='index.html'"><b>Зарегистрироваться</b></button>
+            </form>
+            <p>Уже есть аккаунт? <a href="login.html">Войдите</a></p>
+        </div>
+    </div>
+
+    <!-- Модальное окно капчи -->
+    <div id="captchaModal" class="modal hidden">
+        <div class="modal-content">
+            <span id="closeCaptcha" class="close-button">&times;</span>
+            <div id="captchaContent"></div>
+        </div>
+    </div>
+
+    <script src="scripts/register.js"></script>
+    <script src="scripts/captcha.js"></script>
+</body>
+</html>

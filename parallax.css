@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.parallax-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+#layer1 {
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg2.akspic.ru%2Fcrops%2F2%2F2%2F6%2F9%2F39622%2F39622-nebo-pustynya-gora-dikaya_mestnost-gornyj_relef-1920x1080.jpg&f=1&nofb=1&ipt=ebc39d76e4876475b5fd6344fba9db3413c95bfa7927957f6415ce5f99f08f62&ipo=images'); /* Ваше изображение */
+    z-index: -1;
+    transform: translateY(0);
+}
+
+#layer2 {
+    background-image: url('1920x1080'); /* Ваше изображение */
+    z-index: -2;
+    transform: translateY(0);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding-top: 50vh;
+}
+
+.content h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.dynamic-content {
+    padding: 20px;
+    background-color: #f5f5f5;
+    min-height: 200vh;
+}

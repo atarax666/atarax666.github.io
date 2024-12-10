@@ -1,0 +1,797 @@
+/* Общие стили */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+   /* Фон */
+   background-image: url('images/fon5.jpg'); /*Укажите путь к изображению */
+   background-repeat: repeat; /* Повторять фон */
+   background-size: auto; /* Оставить исходный размер изображения */
+   background-position: top left; /* Начать повторение с верхнего левого угла */
+}
+
+/* Шапка сайта с position: fixed для навигации и absolute для логотипа */
+/* Основной контейнер для Flexbox */
+/* Стили хедера */
+header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #83817a;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Навигация в хедере */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #ffdd59;
+}
+
+#user-list {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+/* Логотип и навигация для десктопов */
+#logo {
+  width: 80px;
+  height: 40px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: inline-block;
+}
+
+#menu-toggle:checked + .burger-menu span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+#menu-toggle:checked + .burger-menu span:nth-child(2) {
+    opacity: 0;
+}
+#menu-toggle:checked + .burger-menu span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+#menu-toggle:checked ~ .menu {
+    display: flex;
+}
+
+.weather-info .block {
+    flex: 1 1 100%;
+}
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s ease-in-out;
+    flex-direction: column;
+    display: none; /* Скрываем меню по умолчанию */
+  }
+
+  /* Появление меню при клике (бургер-меню) */
+  nav ul.show {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+  }
+
+  /* Иконка закрытия меню */
+.close-menu {
+  font-size: 30px;
+  color: red;
+  cursor: pointer;
+}
+/* Поворот иконки при клике */
+.burger-menu.open {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 2rem;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2rem;         /* Размер текста */
+  text-align: center;      /* Центрирование текста */
+  color: #0077cc;          /* Цвет заголовка */
+  margin-bottom: 3rem;     /* Отступ снизу */
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.gallery-container img {
+  flex: 1 1 calc(50% - 10px);
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .gallery-container img {
+      flex: 1 1 100%;
+  }
+}
+
+  /* Прячем бургер-меню на десктопах */
+  @media (min-width: 769px) {
+    .burger-menu {
+      display: none;
+    }
+  }
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+nav ul li a:visited {
+  color: #ccc;
+}
+
+/* Основной контент с отступами */
+main {
+  padding: 120px 20px;
+}
+
+/* Секция с float для обтекания */
+.float-section {
+  float: left;
+  width: 40%;
+  margin-right: 20px;
+}
+
+blockquote {
+  float: right;
+  width: 50%;
+}
+
+/* Боковая панель с float */
+aside {
+  float: right;
+  background-color: #f1f1f1;
+  padding: 20px;
+  width: 30%;
+  margin: 20px;
+}
+
+/* Подвал */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  clear: both;
+}
+
+/* Кнопки и контакты */
+#contact-info.hidden {
+  display: none;
+}
+
+/* Стили для кнопок */
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+  color: white;
+}
+
+/* Кнопки */
+.button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 10px;
+  border: none;
+  color: white;
+  transition: all 0.3s;
+}
+
+.button-1 {
+  background-color: #3498db;
+  position: relative;
+  overflow: hidden;
+}
+
+.button-1:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+.button-2 {
+  background-color: #e74c3c;
+  position: relative;
+}
+
+.button-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s;
+}
+
+.button-2:hover::before {
+  left: 100%;
+}
+
+.button-3 {
+  background-color: #2ecc71;
+  border-radius: 50px;
+  transition: transform 0.3s;
+}
+
+.button-3:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.button-4 {
+  background-color: #9b59b6;
+  position: relative;
+  overflow: hidden;
+}
+
+.button-4::after {
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.2);
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease;
+}
+
+.button-4:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+  
+  /* Карточки */
+  .cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+  }
+  
+  .card {
+      position: relative;
+      width: 250px;
+      overflow: hidden;
+      transition: transform 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgb(0, 0, 0);
+      font-size: 1.2rem;
+      text-align: center;
+  }
+  
+  .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+  }
+  
+  .card p {
+      position: absolute;
+      opacity: 0;
+      font-size: 1.5rem;
+      transition: opacity 0.3s;
+  }
+  
+  .card:hover img {
+      transform: scale(1.1);
+  }
+  
+  .card:hover p {
+      opacity: 1;
+  }
+  
+  /* Контейнер видео */
+  .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      overflow: hidden;
+  }
+  
+  .video-container::before {
+      content: "Прогноз на неделю";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+  }
+  
+  .video-container:hover::before {
+      opacity: 1;
+  }
+
+
+/* Применение position: sticky */
+#weather-form {
+  position: relative;
+  top: 20px;
+  background-color: #eaeaea;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 7 практика */
+/* CSS-переменные */
+:root {
+  --card-bg-color: rgba(34, 34, 34, 0.8); /* Темно-серый цвет для карточек */
+    --input-bg-color: #333333; /* Темно-серый цвет для полей ввода */
+    --card-border: rgba(255, 255, 255, 0.4);
+    --gradient-color: linear-gradient(145deg, #00c6ff, #0072ff);
+    --animation-duration: 3s;
+    --item-bg-color: #404040;
+    --hover-bg-color: #555555;
+    --gallery-bg-color: #333333;
+    --button-bg-color: #0072ff;  
+}
+
+/* Контейнер для социальных иконок */
+.social-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Кнопки социальных сетей */
+.social-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #333; /* Это начальный цвет фона кнопок */
+  border-radius: 50%;
+  overflow: hidden;
+  transition: background-color 0.3s;
+}
+
+.social-btn img {
+  width: 60%;
+  height: auto;
+  z-index: 1;
+}
+
+/* Псевдоэлемент для анимированного градиента */
+.social-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-hover);
+  transition: left 0.5s;
+  z-index: 0;
+}
+
+/* Анимация градиента при наведении */
+.social-btn:hover::before {
+  left: 0;
+}
+
+.social-btn:hover {
+  cursor: pointer;
+}
+
+/* Устанавливаем фиксированный цвет для каждой социальной сети */
+.social-btn.youtube {
+  background-color: #FF0000;
+}
+
+.social-btn.linkedin {
+  background-color: #0077b5;
+}
+
+.social-btn.telegram {
+  background-color: #0088cc;
+}
+
+/* Карточки с темно-серым фоном */
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+  /* color: #000000; */
+}
+
+.glass-card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: var(--card-bg-color);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--card-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: transform 0.5s;
+  overflow: hidden;
+}
+
+.glass-card:hover {
+  transform: scale(1.05);
+}
+
+/* Анимация для карточек и формы */
+@keyframes gradientAnim {
+  from {
+      transform: translate(-20px, -20px);
+  }
+  to {
+      transform: translate(20px, 20px);
+  }
+}
+
+/* Карточки */
+.weather-card {
+  width: 300px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: white;
+  transition: all 0.5s;
+  transform-origin: center;
+}
+
+.weather-card:hover {
+  transform: scale(1.05) rotate(3deg);
+  filter: brightness(1.3);
+}
+
+* {
+  box-sizing: border-box;
+}
+/* 1. Сетка из 7 блоков */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: white;
+}
+
+.grid-item {
+  background-color: var(--item-bg-color);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+  background-color: var(--hover-bg-color);
+}
+
+/* Адаптивность для сетки */
+@media (max-width: 768px) {
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* 2. Галерея (мозаичный вид) */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 20px;
+  background-color: var(--gallery-bg-color);
+}
+
+.gallery-item {
+  background-color: var(--item-bg-color);
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05) rotate(5deg);
+}
+
+/* 3. Форма с анимацией на фокус и клик */
+.form-container {
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+.registration-form {
+  display: grid;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--item-bg-color);
+}
+
+.registration-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #444;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.registration-form input:focus {
+  background-color: #555;
+}
+
+.registration-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--button-bg-color);
+  color: white;
+  transition: transform 0.3s;
+}
+
+.registration-form button:hover {
+  transform: scale(1.05);
+}
+
+/* 4. Футер с Grid Layout и анимацией */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  background-color: #1a1a1a;
+}
+
+.footer-item {
+  background-color: var(--item-bg-color);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.footer-item:hover {
+  transform: scale(1.05);
+  background-color: var(--hover-bg-color);
+}
+
+/* Адаптивность футера */
+@media (max-width: 1000px) {
+  .footer-container {
+      grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+      grid-template-columns: 1fr;
+  }
+}
+
+#like-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #0072ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+#like-button.liked {
+  background-color: #ff0072;
+}
+
+#draw-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  background-color: #0072ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+#draw-button.active {
+  background-color: #00ff72;
+}
+
+.drawn-element {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ff0072;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: opacity 1s;
+}
+
+.captcha-container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s;
+}
+
+.captcha-container.correct {
+  border-color: #28a745;
+}
+
+.captcha-container.incorrect {
+  border-color: #dc3545;
+}
+
+input[type="text"] {
+  padding: 8px;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.cart-container, .filter-container {
+  margin-top: 20px;
+}
+
+.cart-container, .products {
+  margin-top: 20px;
+}
+
+.product-item {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 150px;
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+/* .touch-count{
+  background-color: rgba(255, 255, 255, 0.795);
+}
+
+h3{
+  background-color: rgba(255, 255, 255, 0.795);
+}
+
+li{
+  background-color: rgba(255, 255, 255, 0.795);
+}
+
+ol{
+  background-color: rgba(255, 255, 255, 0.795);
+}
+
+dl{
+  background-color: rgba(255, 255, 255, 0.795);
+}
+
+contents{
+  background-color: rgba(255, 255, 255, 0.795);
+
+}
+
+h2{
+  background-color: rgba(255, 255, 255, 0.795);
+}
+
+p{
+  background-color: rgba(255, 255, 255, 0.795);
+}
+
+pre{
+  background-color: rgba(255, 255, 255, 0.795);
+} */

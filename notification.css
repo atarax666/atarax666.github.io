@@ -23,7 +23,7 @@
 .new-notification {
     position: absolute;
     top: 0;
-    left: 40px;  /* Размещаем справа от иконки */
+    left: 60px;  /* Размещаем справа от иконки */
     font-size: 12px;  /* Сделаем текст меньше */
     color: #ff9800;
     padding: 5px;

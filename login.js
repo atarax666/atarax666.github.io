@@ -1,11 +1,13 @@
-document.getElementById("login-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+document.getElementById('login-form').addEventListener('submit', (e) => {
+    e.preventDefault();
 
-    if (email === "admin" && password === "admin") {
-        alert("Добро пожаловать админ");
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username === "admin" && password === "admin") {
+        alert("Добро пожаловать, администратор!");
+        window.location.href = "index.html";
     } else {
-        alert("Успешный вход!");
+        alert("Неверные данные!");
     }
 });

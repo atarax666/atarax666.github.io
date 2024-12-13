@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогноз погоды</title>
+    <link rel="stylesheet" href="prognoz.css">
+    <link rel="icon" type="image/png"  href="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/favicon-icons/color/sunny-cloud.png" width="300" height="200">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="register.html">Регистрация</a></li>
+                <li><a href="login.html">Вход</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="weather-container">
+            <div class="search-bar">
+                <input type="text" id="city-input" placeholder="Поиск города">
+                <button id="search-btn">🔍</button>
+            </div>
+            <div class="weather-info">
+                <div class="current-weather" id="current-weather">
+                    <p class="default-message">Введите название города, чтобы увидеть прогноз погоды.</p>
+                    <img src="images/search-city.png" alt="Default weather image" class="default-image">
+                </div>
+                <div class="forecast" id="forecast">
+                    <!-- Прогноз на 5 дней -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="prognoz.js"></script>
+</body>
+</html>

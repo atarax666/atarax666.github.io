@@ -3,19 +3,28 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
     background-color: #f4f4f4;
 }
 
-/* Хедер */
-header {
-    background-color: #d3d3d3;
-    padding: 10px 20px;
+a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
 }
 
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Хедер */
 .header-container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
 }
 
 .logo {
@@ -23,80 +32,272 @@ header {
     height: 40px;
 }
 
-/* Меню */
-.desktop-menu a,
-.mobile-menu a {
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu a {
     font-size: 18px;
-    font-weight: bold;
-    margin: 0 10px;
-    text-decoration: none;
 }
 
-.burger-menu div {
-    width: 25px;
-    height: 3px;
-    background: black;
-    margin: 5px 0;
-}
-
-.mobile-menu {
+.menu-links {
     display: none;
 }
 
-/* Уведомления */
+.menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Мобильное меню */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.mobile-menu a {
+    display: block;
+    margin: 10px 0;
+}
+
 .notification-container {
     position: relative;
+}
+
+.notification-bell {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.notification-count {
+    background: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 2px 6px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
 }
 
 .notifications-window {
     display: none;
     position: absolute;
-    top: 40px;
-    right: 0;
+    top: 50px;
+    right: 20px;
     background: white;
-    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     padding: 10px;
-    width: 200px;
+    z-index: 10;
+}
+
+.notifications-window ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notifications-window li {
+    margin-bottom: 10px;
+}
+
+.notifications-list {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: none;
+}
+
+.notifications-list div {
+    cursor: pointer;
+    padding: 5px;
+    color: black;
 }
 
 /* Галерея */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
 .gallery-image {
+    width: 400px;
+    height: 300px;
+}
+
+.gallery-arrow {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Общие стили каталога */
+.catalog {
+    margin: 20px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.product {
+    text-align: center;
     width: 150px;
-    height: 100px;
-    object-fit: cover;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background: #f9f9f9;
+    cursor: grab;
 }
 
-/* Каталог */
-.catalog-item img {
-    width: 177px;
-    height: 100px;
-    object-fit: cover;
+.product img {
+    width: 100%;
+    height: auto;
 }
 
-/* Изображение с параллаксом */
+.product p {
+    margin: 10px 0 0;
+    font-weight: bold;
+}
+
+/* Стили корзины */
+.cart {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #f8f8f8;
+    border-radius: 5px;
+}
+
+.cart-total {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Адаптивные стили для смартфонов */
+@media screen and (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%;
+    }
+}
+
+/* Отступы */
+main {
+    padding: 20px;
+}
+
+/* Параллакс */
 .parallax-image {
-    background-image: url("images/parallax.jpg");
+    background-image: url('images/parallax.jpg');
     background-attachment: fixed;
     background-size: cover;
-    background-position: center;
-    height: 300px;
-    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
     text-align: center;
 }
 
 .parallax-image p {
     color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Видео превью */
+.video-container {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    margin: 20px;
+}
+
+.video-thumbnail {
+    max-width: 100%;
+    height: auto;
+}
+
+.video-title {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.video-container .video-title {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    display: none;
+}
+
+.video-container:hover .video-title {
+    display: block;
+}
+
+/* Боковое меню */
+.sidebar {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+/* Иконки в футере */
+.footer-icons img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
 }
 
 /* Футер */
 footer {
-    background-color: #d3d3d3;
+    background-color: #f8f8f8;
+    padding: 10px 20px;
     text-align: center;
-    padding: 20px;
+    margin-top: 20px;
     font-size: 18px;
 }

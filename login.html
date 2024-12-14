@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Прогноз погоды</div>
+        <nav>
+            <a href="index.html">Главная</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="left-side">
+                <img src="images/ocean.jpg" alt="Background">
+            </div>
+            <div class="right-side">
+                <h1>Добро пожаловать!</h1>
+                <p>Войдите, чтобы получить доступ к данным и возможностям сайта.</p>
+                <form id="login-form">
+                    <label for="username"><b>Имя пользователя:</b></label>
+                    <input type="text" id="username" name="username" placeholder="Введите имя пользователя" required>
+                    <label for="password"><b>Пароль:</b></label>
+                    <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+                    <button type="submit">Войти</button>
+                </form>
+                <p>Нет аккаунта? <a href="register.html">Зарегистрироваться</a></p>
+            </div>
+        </div>
+    </main>
+    <script src="login.js"></script>
+</body>
+</html>

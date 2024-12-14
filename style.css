@@ -1,0 +1,303 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Хедер */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+}
+
+.logo {
+    width: 80px;
+    height: 40px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu a {
+    font-size: 18px;
+}
+
+.menu-links {
+    display: none;
+}
+
+.menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Мобильное меню */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.mobile-menu a {
+    display: block;
+    margin: 10px 0;
+}
+
+.notification-container {
+    position: relative;
+}
+
+.notification-bell {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.notification-count {
+    background: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 2px 6px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.notifications-window {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 10;
+}
+
+.notifications-window ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notifications-window li {
+    margin-bottom: 10px;
+}
+
+.notifications-list {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: none;
+}
+
+.notifications-list div {
+    cursor: pointer;
+    padding: 5px;
+    color: black;
+}
+
+/* Галерея */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-image {
+    width: 400px;
+    height: 300px;
+}
+
+.gallery-arrow {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Общие стили каталога */
+.catalog {
+    margin: 20px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.product {
+    text-align: center;
+    width: 150px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background: #f9f9f9;
+    cursor: grab;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product p {
+    margin: 10px 0 0;
+    font-weight: bold;
+}
+
+/* Стили корзины */
+.cart {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #f8f8f8;
+    border-radius: 5px;
+}
+
+.cart-total {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Адаптивные стили для смартфонов */
+@media screen and (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%;
+    }
+}
+
+/* Отступы */
+main {
+    padding: 20px;
+}
+
+/* Параллакс */
+.parallax-image {
+    background-image: url('images/parallax.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.parallax-image p {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Видео превью */
+.video-container {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    margin: 20px;
+}
+
+.video-thumbnail {
+    max-width: 100%;
+    height: auto;
+}
+
+.video-title {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.video-container .video-title {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    display: none;
+}
+
+.video-container:hover .video-title {
+    display: block;
+}
+
+/* Боковое меню */
+.sidebar {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+/* Иконки в футере */
+.footer-icons img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+/* Футер */
+footer {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}

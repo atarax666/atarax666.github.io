@@ -10,42 +10,46 @@
 <body>
     <!-- Хедер -->
     <header>
-        <div class="header-container">
             <!-- Логотип -->
             <img src="images/logo.jpg" alt="Логотип" class="logo">
 
-            <!-- Меню -->
             <nav class="menu">
-                <div class="menu-links">
-                    <a href="index.html">Главная</a>
-                    <a href="prognoz.html">Прогноз</a>
-                    <a href="bio.html">Интересные факты</a>
-                    <a href="register.html">Регистрация</a>
-                    <a href="login.html">Вход</a>
+                <!-- Стандартное меню для компьютеров -->
+                <ul class="menu-list desktop-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="prognoz.html">Прогноз</a></li>
+                    <li><a href="bio.html">Интересные факты</a></li>
+                    <li><a href="register.html">Регистрация</a></li>
+                    <li><a href="login.html">Вход</a></li>
+                </ul>
+        
+                <!-- Гамбургер-меню для смартфонов -->
+                <div class="hamburger-menu">
+                    <button id="hamburger" aria-label="Меню">☰</button>
+                    <ul id="mobile-menu" class="mobile-menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="prognoz.html">Прогноз</a></li>
+                        <li><a href="bio.html">Интересные факты</a></li>
+                        <li><a href="register.html">Регистрация</a></li>
+                        <li><a href="login.html">Вход</a></li>
+                    </ul>
                 </div>
-                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        
+                <!-- Уведомления -->
+                <div class="notifications">
+                    <button id="notification-btn" aria-label="Уведомления">🔔</button>
+                    <span id="notification-counter">0</span>
+                    <div id="notification-list" class="notification-popup">
+                        <h3>Уведомления</h3>
+                        <ul></ul>
+                    </div>
+                </div>
             </nav>
-
-             <!-- Уведомления -->
-             <div class="notification-container">
-                <span class="notification-bell" onclick="toggleNotifications()">🔔</span>
-                <span class="notification-count" id="notification-count">0</span>
-            </div>
-        </div>
     </header>
 
     <!-- Окно со списком уведомлений -->
     <div class="notifications-window" id="notifications-window">
         <ul id="notification-list"></ul>
-    </div>
-
-    <!-- Окно мобильного меню -->
-    <div class="mobile-menu" id="mobile-menu">
-        <a href="index.html">Главная</a>
-        <a href="prognoz.html">Прогноз</a>
-        <a href="bio.html">Интересные факты</a>
-        <a href="register.html">Регистрация</a>
-        <a href="login.html">Вход</a>
     </div>
 
     <main>
@@ -77,6 +81,7 @@
             </div>
         </section>
 
+        <!-- Каталог -->
         <section class="catalog">
             <h2>Каталог товаров</h2>
             <div class="product-container">
@@ -92,9 +97,14 @@
                     <img src="images/hat.jpg" alt="Шапка">
                     <p>Шапка - 1000 ₽</p>
                 </div>
+                <div class="product" draggable="true" ondragstart="drag(event)" data-name="Дождевик" data-price="2000">
+                    <img src="images/dozd.jpg" alt="Дождевик">
+                    <p>Дождевик - 2000 ₽</p>
+                </div>
             </div>
         </section>
-        
+
+        <!-- Корзина -->
         <section class="cart" ondrop="addToCart(event)" ondragover="allowDrop(event)">
             <h2>Корзина 🛒</h2>
             <ul id="cart-items"></ul>

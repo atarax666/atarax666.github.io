@@ -9,7 +9,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #4f46e5;
+    background-color: #138857;
     color: white;
 }
 
@@ -60,7 +60,7 @@ form input, form button {
 }
 
 form button {
-    background-color: #4f46e5;
+    background-color: #138857;
     color: white;
     border: none;
     cursor: pointer;
